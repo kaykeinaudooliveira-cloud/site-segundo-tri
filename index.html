@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja de Roupas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Moda & Estilo</h1>
+        <nav>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#localizacao">Nossas Lojas</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção de Roupas Populares por Categoria -->
+        <section id="catalogo">
+            <h2>Roupas Mais Populares</h2>
+            
+            <div class="categoria">
+                <h3>Vestuário Feminino</h3>
+                <div class="grade-produtos">
+                    <div class="card-produto" onclick="verDetalhes('Vestido Floral', 'R$ 159,90', 'Vestido leve e confortável, ideal para o verão.')">
+                        <img src="https://unsplash.com" alt="Vestido Floral">
+                        <h4>Vestido Floral</h4>
+                        <p>R$ 159,90</p>
+                        <button>Ver Detalhes</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="categoria">
+                <h3>Vestuário Masculino</h3>
+                <div class="grade-produtos">
+                    <div class="card-produto" onclick="verDetalhes('Jaqueta de Couro', 'R$ 299,90', 'Jaqueta preta estilosa e resistente.')">
+                        <img src="https://unsplash.com" alt="Jaqueta de Couro">
+                        <h4>Jaqueta de Couro</h4>
+                        <p>R$ 299,90</p>
+                        <button>Ver Detalhes</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Localização das Lojas -->
+        <section id="localizacao">
+            <h2>Onde Nos Encontrar</h2>
+            <div class="mapa-container">
+                <!-- Substitua o iframe pela incorporação exata do seu Google Maps -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.9187710685824!2d-49.28005592377774!3d-25.440979077554783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce470f0b22347%3A0x89a919fef0a7fb10!2sShopping%20Curitiba!5e0!3m2!1spt-BR!2sbr!4v1780052224882!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Detalhes -->
+    <div id="modal-detalhes" class="modal oculta">
+        <div class="modal-conteudo">
+            <span class="botao-fechar" onclick="fecharDetalhes()">&times;</span>
+            <h3 id="modal-titulo"></h3>
+            <p id="modal-preco"></p>
+            <p id="modal-descricao"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
